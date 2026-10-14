@@ -1,5 +1,5 @@
 // Cache só dos arquivos do próprio app. Chamadas para Supabase, Google e CDNs passam direto.
-const CACHE = 'neyhub-v5';
+const CACHE = 'neyhub-v6';
 const ARQ = ['./', 'index.html', 'datas.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'logo-nh.png', 'favicon.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQ)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
