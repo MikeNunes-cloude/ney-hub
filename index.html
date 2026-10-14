@@ -827,7 +827,8 @@ const nomesEquipe = () => [...new Set([...S.config.equipe.map(e => e.nome), ...S
 /* ===== INÍCIO ===== */
 function vInicio() {
   const h = hoje(), dHoje = datasDoDia(h, S.datas), d = new Date();
-  const saud = d.getHours() < 12 ? 'Bom dia' : d.getHours() < 18 ? 'Boa tarde' : 'Boa noite';
+  const hr = d.getHours(), saud = hr >= 5 && hr < 12 ? 'Bom dia' : hr >= 12 && hr < 18 ? 'Boa tarde' : 'Boa noite';
+  const nome = (EU || '').trim().split(/\s+/)[0] || 'equipe';
   const camp = CAMPANHAS[d.getMonth() + 1] || [];
   const prox = proximasDatas(15, false).slice(0, 8);
   const semana = _iso(new Date(d.getFullYear(), d.getMonth(), d.getDate() + 7));
@@ -840,7 +841,7 @@ function vInicio() {
   const urg = abertas.slice().sort((a, b) => (a.prazo || '9999').localeCompare(b.prazo || '9999')).slice(0, 5);
 
   return `
-  <div class="page-h"><div><p class="eyebrow">${fmtLongo(h)}</p><h1>${saud}, equipe</h1></div>
+  <div class="page-h"><div><p class="eyebrow">${fmtLongo(h)}</p><h1>${saud}, ${esc(nome)}</h1></div>
     <div class="h-actions"><button class="btn" data-act="novaDemanda">${ic('checks')}Nova demanda</button><button class="btn primary" data-act="novoCard">${ic('plus')}Nova pauta</button></div></div>
 
   <section class="hoje">
