@@ -152,7 +152,6 @@ h2{font-size:15px;margin:0;letter-spacing:-.01em}
 .ev.post{background:var(--primary-50);color:var(--primary-700);font-weight:500}
 .ev.post.publicado{background:var(--primary-700);color:#fff}
 .ev.dem{background:var(--amber-50);color:var(--amber)}
-.ev.g{background:#EEF1F6;color:#3E4C66}
 .ev svg.i{width:11px;height:11px}
 .more{font-size:11px;color:var(--muted);padding-left:4px}
 .dots{display:none;gap:3px;flex-wrap:wrap}
@@ -265,26 +264,6 @@ textarea{border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;out
 .mgrid .fld{margin-bottom:0}
 .eng{margin-top:10px;font-size:13px}
 
-/* Metrics */
-.chart{width:100%;height:auto;display:block}
-.bars .b{display:grid;grid-template-columns:110px 1fr 64px;gap:10px;align-items:center;margin-bottom:8px;font-size:13px}
-.bars .track{height:10px;background:var(--surface-2);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
-.bars .track i{display:block;height:100%;background:var(--primary);border-radius:6px}
-.bars .b span:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
-table.tb{width:100%;border-collapse:collapse;font-size:13px}
-.tb th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
-.tb td{padding:9px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
-.tb tr:last-child td{border-bottom:0}
-.tbwrap{overflow-x:auto}
-.insight{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
-.insight:first-child{border-top:0}
-.insight svg{color:var(--primary-600);margin-top:2px}
-details.guide summary{cursor:pointer;font-weight:600;list-style:none;display:flex;align-items:center;gap:8px}
-details.guide summary::-webkit-details-marker{display:none}
-.guide dl{margin:12px 0 0;display:grid;grid-template-columns:200px 1fr;gap:10px 18px;font-size:13px}
-.guide dt{font-weight:600}
-.guide dd{margin:0;color:var(--muted)}
-
 /* Ideias */
 .icard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
 .icard h4{margin:0;font-size:15px}
@@ -323,7 +302,7 @@ code{background:var(--surface-2);border:1px solid var(--line);border-radius:5px;
   main{padding:16px 16px 96px}
   .mobile-top{display:flex;align-items:center;gap:10px;padding:12px 16px;padding-top:max(12px,env(safe-area-inset-top));background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
   .mobile-top .brand{padding:0;flex:1}
-  .mobile-nav{display:grid;grid-template-columns:repeat(6,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px max(6px,env(safe-area-inset-bottom));z-index:20}
+  .mobile-nav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px max(6px,env(safe-area-inset-bottom));z-index:20}
   .mobile-nav button{border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;color:var(--muted);padding:4px 0;cursor:pointer}
   .mobile-nav button.on{color:var(--primary-700);font-weight:600}
   .mobile-nav svg.i{width:21px;height:21px}
@@ -415,11 +394,9 @@ const ICONS = {
   user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
   arrowup:'<path d="M12 19V5M5 12l7-7 7 7"/>',
   trend:'<path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
-  google:'<path d="M20.5 12.2c0-.6-.1-1.2-.2-1.7H12v3.3h4.8a4.1 4.1 0 0 1-1.8 2.7v2.2h2.9c1.7-1.6 2.6-3.9 2.6-6.5z"/><path d="M12 21c2.4 0 4.5-.8 5.9-2.2L15 16.6c-.8.5-1.8.9-3 .9-2.3 0-4.3-1.6-5-3.7H4v2.3A9 9 0 0 0 12 21z"/><path d="M7 13.8a5.4 5.4 0 0 1 0-3.6V7.9H4a9 9 0 0 0 0 8.2l3-2.3z"/><path d="M12 6.5c1.3 0 2.5.5 3.4 1.3L18 5.3A9 9 0 0 0 4 7.9l3 2.3c.7-2.1 2.7-3.7 5-3.7z"/>',
   edit:'<path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/>',
   cloud:'<path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7z"/>',
   bell:'<path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/>',
-  insta:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',
 };
 const ic = (n, cls = '') => `<svg class="i ${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ''}</svg>`;
 
@@ -468,7 +445,7 @@ function loadScript(src) { return new Promise((ok, err) => { if (document.queryS
 
 /* ===== Estado ===== */
 const LS = 'pauta_v1';
-const blank = () => ({ cards: [], demandas: [], metricas: [], datas: [], config: { equipe: [], gcalId: '', gClientId: '', perfil: 'eusoupauloney' } });
+const blank = () => ({ cards: [], demandas: [], metricas: [], datas: [], config: { equipe: [] } });
 let S = (() => { try { const d = JSON.parse(localStorage.getItem(LS)); if (d) { const b = blank(); return { ...b, ...d, config: { ...b.config, ...d.config } }; } } catch (e) {} return blank(); })();
 const persist = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) { toast('Armazenamento do navegador cheio'); } };
 /* Quem está usando este aparelho — assina as alterações e evita notificar a própria pessoa */
@@ -478,7 +455,6 @@ function acaoDe(col, prev, item) {
   if (col === 'cards') return !prev ? 'criou a pauta' : prev.status !== item.status ? `moveu para ${COL_NOME[item.status]}` : 'atualizou a pauta';
   if (col === 'demandas') return !prev ? 'abriu a demanda' : prev.status !== item.status ? (item.status === 'concluida' ? 'concluiu a demanda' : item.status === 'producao' ? 'colocou em produção' : 'reabriu a demanda') : 'atualizou a demanda';
   if (col === 'datas') return !prev ? 'adicionou a data' : 'editou a data';
-  if (col === 'metricas') return !prev ? 'registrou um fechamento de métricas' : 'editou um fechamento de métricas';
   return 'atualizou';
 }
 const tituloDe = x => x.titulo || x.nome || (x.data ? 'Fechamento de ' + fmtCurto(x.data) : '');
@@ -544,7 +520,7 @@ const Cloud = {
       }
     }
     persist(); render();
-    if (D && !D.dirty && p.new && p.new.id === D.obj.id) { D.obj = JSON.parse(JSON.stringify(p.new.dados)); pintarDrawer(); }
+    if (D && !D.dirty && p.new && p.new.id && p.new.id === D.obj.id && p.new.dados) { D.obj = JSON.parse(JSON.stringify(p.new.dados)); pintarDrawer(); }
   },
 };
 function setSync() {
@@ -611,10 +587,10 @@ const Push = {
 function b64ParaBytes(s) { const p = '='.repeat((4 - s.length % 4) % 4), b = atob((s + p).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(b, c => c.charCodeAt(0)); }
 
 /* ===== Atividade da equipe ===== */
-const COL_VIEW = { cards: 'quadro', demandas: 'demandas', datas: 'agenda', metricas: 'metricas' };
+const COL_VIEW = { cards: 'quadro', demandas: 'demandas', datas: 'agenda' };
 function atividades() {
   const out = [];
-  for (const k of ['cards', 'demandas', 'datas', 'metricas']) for (const x of S[k]) if (x.acao) out.push({ ...x, _col: k });
+  for (const k of ['cards', 'demandas', 'datas']) for (const x of S[k]) if (x.acao) out.push({ ...x, _col: k });
   return out.sort((a, b) => (b.atualizado || 0) - (a.atualizado || 0)).slice(0, 60);
 }
 const naoLidas = () => { const v = +localStorage.getItem('pauta_visto') || 0; return atividades().filter(x => x.dev !== DEV && (x.atualizado || 0) > v).length; };
@@ -686,74 +662,8 @@ function hidratar(root = document) {
   });
 }
 
-/* ===== Google Agenda ===== */
-const GCal = {
-  token: null, exp: 0, ev: {}, seen: new Set(), meses: {},
-  get ok() { return this.token && this.exp > Date.now(); },
-  restore() { try { const x = JSON.parse(sessionStorage.getItem('pauta_gtoken')); if (x && x.e > Date.now()) { this.token = x.t; this.exp = x.e; } } catch (e) {} },
-  calId() { return S.config.gcalId || 'primary'; },
-  async connect() {
-    const cid = S.config.gClientId;
-    if (!cid) { go('config'); toast('Cole o Client ID do Google em Configurações'); return; }
-    try { await loadScript('https://accounts.google.com/gsi/client'); } catch (e) { toast('Não consegui carregar o login do Google'); return; }
-    const tc = google.accounts.oauth2.initTokenClient({
-      client_id: cid, scope: 'https://www.googleapis.com/auth/calendar.events',
-      callback: r => {
-        if (r.error) { toast('O Google recusou a conexão'); return; }
-        this.token = r.access_token; this.exp = Date.now() + (r.expires_in - 60) * 1000;
-        sessionStorage.setItem('pauta_gtoken', JSON.stringify({ t: this.token, e: this.exp }));
-        this.ev = {}; this.seen.clear(); this.meses = {};
-        toast('Google Agenda conectado'); render();
-      },
-    });
-    tc.requestAccessToken();
-  },
-  async carregarMes(d) {
-    if (!this.ok) return;
-    const y = d.getFullYear(), m = d.getMonth(), key = y + '-' + m;
-    if (this.meses[key]) return; this.meses[key] = 1;
-    const min = new Date(y, m, -6).toISOString(), max = new Date(y, m + 1, 8).toISOString();
-    const r = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(this.calId())}/events?singleEvents=true&orderBy=startTime&maxResults=250&timeMin=${min}&timeMax=${max}`, { headers: { Authorization: 'Bearer ' + this.token } });
-    if (!r.ok) { delete this.meses[key]; if (r.status === 401) this.token = null; toast('Não consegui ler o Google Agenda'); return; }
-    const j = await r.json();
-    for (const e of j.items || []) {
-      if (this.seen.has(e.id)) continue; this.seen.add(e.id);
-      const s = e.start.date || e.start.dateTime.slice(0, 10);
-      (this.ev[s] = this.ev[s] || []).push({ titulo: e.summary || '(sem título)', hora: e.start.dateTime ? e.start.dateTime.slice(11, 16) : '', link: e.htmlLink });
-    }
-    render();
-  },
-  async criar(titulo, iso, hora, detalhes) {
-    const body = { summary: titulo, description: detalhes || '' };
-    if (hora) { const ini = new Date(`${iso}T${hora}:00`), fim = new Date(ini.getTime() + 36e5); body.start = { dateTime: ini.toISOString(), timeZone: 'America/Sao_Paulo' }; body.end = { dateTime: fim.toISOString(), timeZone: 'America/Sao_Paulo' }; }
-    else { body.start = { date: iso }; body.end = { date: _iso(new Date(parse(iso).getTime() + 864e5)) }; }
-    const r = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(this.calId())}/events`, { method: 'POST', headers: { Authorization: 'Bearer ' + this.token, 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-    if (!r.ok) throw new Error(r.status);
-    const e = await r.json();
-    this.seen.add(e.id); (this.ev[iso] = this.ev[iso] || []).push({ titulo, hora: hora || '', link: e.htmlLink });
-    return e;
-  },
-};
-function gTemplate(titulo, iso, hora, detalhes) {
-  let dates;
-  const compact = s => s.replace(/[-:]/g, '');
-  if (hora) {
-    const fim = new Date(`${iso}T${hora}:00`); fim.setHours(fim.getHours() + 1);
-    const f = `${_iso(fim)}T${String(fim.getHours()).padStart(2, '0')}${String(fim.getMinutes()).padStart(2, '0')}00`;
-    dates = `${compact(iso)}T${compact(hora)}00/${compact(f)}`;
-  } else dates = `${compact(iso)}/${compact(_iso(new Date(parse(iso).getTime() + 864e5)))}`;
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(titulo)}&dates=${dates}&details=${encodeURIComponent(detalhes || '')}&ctz=America/Sao_Paulo`;
-}
-async function mandarProGoogle(titulo, iso, hora, detalhes) {
-  if (GCal.ok) {
-    try { await GCal.criar(titulo, iso, hora, detalhes); toast('Adicionado ao Google Agenda'); render(); return; }
-    catch (e) { toast('Falhou pela conexão — abrindo o Google Agenda'); }
-  }
-  window.open(gTemplate(titulo, iso, hora, detalhes), '_blank', 'noopener');
-}
-
 /* ===== Navegação ===== */
-const VIEWS = [['inicio', 'Início', 'home'], ['agenda', 'Agenda', 'cal'], ['quadro', 'Linha editorial', 'board'], ['demandas', 'Demandas', 'checks'], ['metricas', 'Métricas', 'chart'], ['ideias', 'Ideias', 'bulb']];
+const VIEWS = [['inicio', 'Início', 'home'], ['agenda', 'Agenda', 'cal'], ['quadro', 'Linha editorial', 'board'], ['demandas', 'Demandas', 'checks'], ['ideias', 'Ideias', 'bulb']];
 const MOB_NOME = { quadro: 'Quadro' };
 let view = (location.hash.slice(1) || 'inicio');
 function go(v) { view = v; history.replaceState(null, '', '#' + v); render(); window.scrollTo(0, 0); }
@@ -768,7 +678,7 @@ function renderNav() {
 }
 function render() {
   renderNav();
-  const fn = { inicio: vInicio, agenda: vAgenda, quadro: vQuadro, demandas: vDemandas, metricas: vMetricas, ideias: vIdeias, config: vConfig }[view] || vInicio;
+  const fn = { inicio: vInicio, agenda: vAgenda, quadro: vQuadro, demandas: vDemandas, ideias: vIdeias, config: vConfig }[view] || vInicio;
   $('#main').innerHTML = fn();
   hidratar($('#main'));
 }
@@ -784,11 +694,6 @@ function proximasDatas(dias, incluirHoje = true) {
   return out;
 }
 const pautaDaData = (nome, iso) => S.cards.find(c => c.dataRef === nome && c.data === iso);
-function engajamento(c) {
-  const m = c.metricas || {}; const a = +m.alcance;
-  if (!a) return null;
-  return ((+m.curtidas || 0) + (+m.comentarios || 0) + (+m.compart || 0) + (+m.salvos || 0)) / a;
-}
 function cardsFiltrados() {
   const f = Q;
   return S.cards.filter(c => (!f.fmt || c.formato === f.fmt) && (!f.resp || c.resp === f.resp) && (!f.q || (c.titulo + ' ' + (c.legenda || '') + ' ' + (c.pilar || '')).toLowerCase().includes(f.q.toLowerCase())));
@@ -809,8 +714,6 @@ function vInicio() {
   const publ = S.cards.filter(c => c.status === 'publicado' && (c.data || '').startsWith(mesIso)).length;
   const proxPosts = S.cards.filter(c => c.data && c.data >= h && c.status !== 'publicado').sort((a, b) => (a.data + (a.hora || '')).localeCompare(b.data + (b.hora || ''))).slice(0, 6);
   const urg = abertas.slice().sort((a, b) => (a.prazo || '9999').localeCompare(b.prazo || '9999')).slice(0, 5);
-  const ms = S.metricas.slice().sort((a, b) => a.data.localeCompare(b.data));
-  const ult = ms[ms.length - 1], pen = ms[ms.length - 2];
 
   return `
   <div class="page-h"><div><p class="eyebrow">${fmtLongo(h)}</p><h1>${saud}, equipe</h1></div>
@@ -849,25 +752,17 @@ function vInicio() {
     <section class="panel"><div class="sec-h"><h2>Demandas por prazo</h2><button class="btn ghost sm" data-act="go" data-v="demandas">Ver todas</button></div>
       ${urg.map(x => `<div class="row"><span class="prio p-${x.prioridade || 'media'}"></span><div class="grow"><div class="t">${esc(x.titulo)}</div><div class="small muted">${esc(x.secretaria || '')}${x.prazo ? ` · <span class="${x.prazo < h ? 'late' : ''}">${fmtCurto(x.prazo)} (${rel(x.prazo)})</span>` : ''}</div></div><span class="pill s-${x.status}">${DEM_NOME[x.status]}</span></div>`).join('') || '<div class="empty">Nenhuma demanda em aberto</div>'}
     </section>
-    <section class="panel"><div class="sec-h"><h2>Instagram · @${esc(S.config.perfil)}</h2><button class="btn ghost sm" data-act="go" data-v="metricas">Métricas</button></div>
-      ${ult ? `<div class="grid2" style="margin:0">
-          <div><div class="small muted">Seguidores</div><div style="font-size:26px;font-weight:700">${num(ult.seguidores)}</div>${pen ? deltaHTML(ult.seguidores - pen.seguidores) : ''}</div>
-          <div><div class="small muted">Taxa de engajamento</div><div style="font-size:26px;font-weight:700">${pct(ult.interacoes / ult.alcance)}</div><div class="small muted">interações ÷ alcance</div></div>
-        </div><p class="small muted" style="margin:12px 0 0">Último fechamento: ${fmtCurto(ult.data)}</p>`
-        : `<div class="empty">Registre o primeiro fechamento de métricas para acompanhar a evolução.<br><br><button class="btn sm" data-act="novaMetrica">${ic('plus')}Registrar agora</button></div>`}
+    <section class="panel"><div class="sec-h"><h2>Atividade da equipe</h2><button class="btn ghost sm" data-act="atividade">Ver tudo</button></div>
+      ${atividades().slice(0, 6).map(x => `<div class="row" data-act="abrirAtiv" data-col="${x._col}" data-id="${x.id}" style="cursor:pointer">${av(x.por || '?')}<div class="grow"><div class="small"><b>${esc(x.dev === DEV ? 'Você' : (x.por || 'Alguém'))}</b> ${esc(x.acao)}</div><div class="small muted" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(tituloDe(x))} · ${tempoAtras(x.atualizado || 0)}</div></div></div>`).join('') || '<div class="empty">As ações da equipe vão aparecer aqui.</div>'}
     </section>
   </div>`;
 }
-const deltaHTML = n => isFinite(n) && n !== 0 ? `<div class="small ${n > 0 ? 'up' : 'down'}">${n > 0 ? '+' : ''}${num(n)} desde o fechamento anterior</div>` : '<div class="small muted">sem variação</div>';
-
 /* ===== AGENDA ===== */
 let calMes = (() => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), 1); })();
 let calSel = hoje();
-let calTab = 'mes';
-const calF = { datas: true, posts: true, demandas: true, google: true };
+const calF = { datas: true, posts: true, demandas: true };
 function vAgenda() {
   const y = calMes.getFullYear(), m = calMes.getMonth();
-  if (GCal.ok) GCal.carregarMes(calMes);
   const ini = new Date(y, m, 1 - new Date(y, m, 1).getDay());
   const semanas = Math.ceil((new Date(y, m, 1).getDay() + new Date(y, m + 1, 0).getDate()) / 7);
   const h = hoje();
@@ -880,14 +775,12 @@ function vAgenda() {
     const ds = calF.datas ? datasDoDia(iso, S.datas) : [];
     const ps = calF.posts ? (posts[iso] || []) : [];
     const de = calF.demandas ? (dems[iso] || []) : [];
-    const ge = calF.google ? (GCal.ev[iso] || []) : [];
     const evs = [
       ...ds.map(x => `<div class="ev dt" title="${esc(x.nome)}"><span class="dot d-${x.tipo}"></span>${esc(x.nome)}</div>`),
       ...ps.map(c => `<div class="ev post ${c.status}" title="${esc(c.titulo)}">${ic(FMT_IC[c.formato] || 'image')}${esc(c.titulo || 'Sem título')}</div>`),
       ...de.map(x => `<div class="ev dem" title="${esc(x.titulo)}">${ic('flag')}${esc(x.titulo)}</div>`),
-      ...ge.map(x => `<div class="ev g" title="${esc(x.titulo)}">${x.hora ? x.hora + ' ' : ''}${esc(x.titulo)}</div>`),
     ];
-    const dots = [...ds.map(x => `<span class="dot d-${x.tipo}"></span>`), ...ps.map(() => '<span class="dot" style="background:var(--primary-600)"></span>'), ...de.map(() => '<span class="dot" style="background:var(--amber)"></span>'), ...ge.map(() => '<span class="dot" style="background:#7A879E"></span>')].slice(0, 6).join('');
+    const dots = [...ds.map(x => `<span class="dot d-${x.tipo}"></span>`), ...ps.map(() => '<span class="dot" style="background:var(--primary-600)"></span>'), ...de.map(() => '<span class="dot" style="background:var(--amber)"></span>')].slice(0, 6).join('');
     const fer = ds.some(x => x.tipo === 'feriado' || x.tipo === 'municipal');
     cells += `<div class="cell ${dt.getMonth() !== m ? 'out' : ''} ${iso === h ? 'today' : ''} ${iso === calSel ? 'sel' : ''} ${fer ? 'fer' : ''}" data-act="selDia" data-d="${iso}">
       <span class="n">${dt.getDate()}</span>${evs.slice(0, 4).join('')}${evs.length > 4 ? `<span class="more">+${evs.length - 4}</span>` : ''}<div class="dots">${dots}</div></div>`;
@@ -897,67 +790,36 @@ function vAgenda() {
 
   return `
   <div class="page-h"><div><p class="eyebrow">Calendário editorial</p><h1>Agenda</h1></div>
-    <div class="h-actions">
-      <div class="tabs"><button class="${calTab === 'mes' ? 'on' : ''}" data-act="calTab" data-v="mes">${ic('cal')}Calendário</button><button class="${calTab === 'google' ? 'on' : ''}" data-act="calTab" data-v="google">${ic('google')}Google Agenda</button></div>
-      ${GCal.ok ? `<span class="pill t-comemorativa">${ic('check')}Google conectado</span>` : `<button class="btn" data-act="gConnect">${ic('google')}Conectar Google</button>`}
-      <button class="btn" data-act="exportarICS" title="Baixar arquivo .ics para importar no Google Agenda">${ic('download')}.ics</button>
-    </div></div>
-  ${calTab === 'google' ? vGoogleEmbed() : `
+    <div class="h-actions"><button class="btn primary" data-act="novoCard" data-d="${calSel}">${ic('plus')}Nova pauta</button></div></div>
   <div class="toolbar">
     <div class="cal-nav"><button class="icon-btn" data-act="calMes" data-v="-1" aria-label="Mês anterior">${ic('left')}</button><h2>${MESES[m]} ${y}</h2><button class="icon-btn" data-act="calMes" data-v="1" aria-label="Próximo mês">${ic('right')}</button><button class="btn sm" data-act="calHoje">Hoje</button></div>
     <div style="flex:1"></div>
-    <div class="filters">${filtro('datas', 'Datas')}${filtro('posts', 'Publicações')}${filtro('demandas', 'Prazos')}${GCal.ok ? filtro('google', 'Google') : ''}</div>
+    <div class="filters">${filtro('datas', 'Datas')}${filtro('posts', 'Publicações')}${filtro('demandas', 'Prazos')}</div>
   </div>
   ${camp.length ? `<div class="camp" style="margin-bottom:12px">${camp.map(([n, t]) => `<span class="pill t-comemorativa">${esc(n)} · ${esc(t)}</span>`).join('')}</div>` : ''}
   <div class="cal-wrap">
     <div class="cal"><div class="cal-head">${['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].map(x => `<div>${x}</div>`).join('')}</div><div class="cal-grid">${cells}</div></div>
     ${vDia(calSel, posts, dems)}
-  </div>`}`;
+  </div>`;
 }
 function vDia(iso, posts, dems) {
-  const ds = datasDoDia(iso, S.datas), ps = posts[iso] || [], de = dems[iso] || [], ge = GCal.ev[iso] || [];
+  const ds = datasDoDia(iso, S.datas), ps = posts[iso] || [], de = dems[iso] || [];
   return `<aside class="panel daypanel">
     <p class="eyebrow">${rel(iso)}</p><h3>${fmtLongo(iso)}</h3>
     <div class="dp-sec"><div class="l">Datas</div>
       ${ds.map(x => { const p = pautaDaData(x.nome, iso); return `<div class="dp-item"><div class="t">${esc(x.nome)} <span class="pill t-${x.tipo}">${TIPO_NOME[x.tipo]}</span></div>${x.dica ? `<p>${esc(x.dica)}</p>` : '<div style="height:8px"></div>'}
         <div class="acts">${p ? `<button class="btn sm" data-act="abrirCard" data-id="${p.id}">${ic('edit')}Ver pauta</button>` : `<button class="btn sm primary" data-act="pautarData" data-n="${esc(x.nome)}" data-d="${iso}">${ic('plus')}Pautar</button>`}
-        <button class="btn sm" data-act="gData" data-n="${esc(x.nome)}" data-d="${iso}" data-x="${esc(x.dica)}">${ic('google')}Google Agenda</button>
         ${x.custom ? `<button class="icon-btn sm" data-act="editarData" data-id="${x.custom}" aria-label="Editar data">${ic('edit')}</button>` : ''}</div></div>`; }).join('') || '<div class="small faint">Nenhuma data comemorativa.</div>'}
     </div>
     <div class="dp-sec"><div class="l">Publicações</div>
       ${ps.map(c => `<div class="dp-item" data-act="abrirCard" data-id="${c.id}" style="cursor:pointer"><div class="t">${ic(FMT_IC[c.formato] || 'image')}${esc(c.titulo || 'Sem título')}</div><div class="small muted" style="margin-top:4px"><span class="pill s-${c.status}">${COL_NOME[c.status]}</span> ${c.hora || ''} ${c.resp ? '· ' + esc(c.resp) : ''}</div></div>`).join('') || '<div class="small faint">Nenhuma publicação marcada.</div>'}
     </div>
     ${de.length ? `<div class="dp-sec"><div class="l">Prazos de demandas</div>${de.map(x => `<div class="dp-item" data-act="editarDemanda" data-id="${x.id}" style="cursor:pointer"><div class="t">${ic('flag')}${esc(x.titulo)}</div><div class="small muted">${esc(x.secretaria || '')} ${x.resp ? '· ' + esc(x.resp) : ''}</div></div>`).join('')}</div>` : ''}
-    ${ge.length ? `<div class="dp-sec"><div class="l">Google Agenda</div>${ge.map(x => `<div class="dp-item"><div class="t">${x.hora ? `<span class="muted">${x.hora}</span>` : ''}${esc(x.titulo)}</div>${x.link ? `<a class="small" href="${esc(x.link)}" target="_blank" rel="noopener">Abrir no Google</a>` : ''}</div>`).join('')}</div>` : ''}
     <div class="dp-sec" style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="btn sm primary" data-act="novoCard" data-d="${iso}">${ic('plus')}Pauta neste dia</button>
       <button class="btn sm" data-act="novaData" data-d="${iso}">${ic('flag')}Data da cidade</button>
     </div>
   </aside>`;
-}
-function vGoogleEmbed() {
-  const id = S.config.gcalId;
-  if (!id) return `<div class="panel"><h2 style="margin-bottom:8px">Ver o Google Agenda aqui dentro</h2>
-    <p class="muted">Cole o ID da agenda do prefeito (ou da equipe) em Configurações. Ele aparece no Google Agenda em <b>Configurações → [nome da agenda] → Integrar agenda → ID da agenda</b>. Quem estiver logado numa conta Google com acesso à agenda vai ver os compromissos aqui.</p>
-    <button class="btn primary" data-act="go" data-v="config">${ic('gear')}Abrir configurações</button></div>`;
-  const src = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(id)}&ctz=America%2FSao_Paulo&mode=MONTH&showTitle=0&showPrint=0&hl=pt_BR&color=%2322A699`;
-  return `<iframe class="gframe" src="${src}" title="Google Agenda"></iframe>`;
-}
-function exportarICS() {
-  const y = new Date().getFullYear(), linhas = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//NeyHub//Comunicacao//PT', 'CALSCALE:GREGORIAN', 'X-WR-CALNAME:Datas comemorativas · Ney Hub', 'X-WR-TIMEZONE:America/Sao_Paulo'];
-  const icsEsc = s => String(s || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, '\\n');
-  const stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
-  const ev = (id, iso, titulo, desc) => { const fim = _iso(new Date(parse(iso).getTime() + 864e5)); linhas.push('BEGIN:VEVENT', `UID:${id}@pauta`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${iso.replace(/-/g, '')}`, `DTEND;VALUE=DATE:${fim.replace(/-/g, '')}`, `SUMMARY:${icsEsc(titulo)}`, `DESCRIPTION:${icsEsc(desc)}`, 'TRANSP:TRANSPARENT', 'END:VEVENT'); };
-  for (let a = y; a <= y + 1; a++) {
-    for (let d = new Date(a, 0, 1); d.getFullYear() === a; d.setDate(d.getDate() + 1)) {
-      const iso = _iso(d);
-      datasDoDia(iso, S.datas).forEach((x, i) => ev(`${iso}-${i}`, iso, x.nome, `${TIPO_NOME[x.tipo]}. ${x.dica || ''}`));
-    }
-  }
-  S.cards.filter(c => c.data && c.status !== 'publicado').forEach(c => ev('post-' + c.id, c.data, `[${c.formato || 'Post'}] ${c.titulo || ''}`, `${COL_NOME[c.status]}${c.resp ? ' · ' + c.resp : ''}`));
-  linhas.push('END:VCALENDAR');
-  baixar(new Blob([linhas.join('\r\n')], { type: 'text/calendar' }), `datas-comemorativas-${y}-${y + 1}.ics`);
-  toast('Arquivo .ics baixado — importe no Google Agenda');
 }
 function baixar(blob, nome) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = nome; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); }
 
@@ -982,14 +844,13 @@ function vQuadro() {
 function kcard(c) {
   const ms = c.midias || [], chk = c.checklist || [], feitos = chk.filter(x => x.ok).length, h = hoje();
   const atras = c.data && c.data < h && c.status !== 'publicado';
-  const eng = engajamento(c);
   return `<div class="kcard" draggable="true" data-card="${c.id}" data-act="abrirCard" data-id="${c.id}">
     ${ms.length ? `<div class="kthumb">${thumbHTML(ms[0])}${ms.length > 1 ? `<span class="cnt">${ic('layers')}${ms.length}</span>` : ms[0].kind === 'video' ? `<span class="cnt">${ic('play')}</span>` : ''}</div>` : ''}
     <div class="kbody">
       <div class="ktags">${c.formato ? `<span class="pill">${ic(FMT_IC[c.formato] || 'image')}${c.formato}</span>` : ''}${c.pilar ? `<span class="pill">${esc(c.pilar)}</span>` : ''}</div>
       <div class="t">${esc(c.titulo || 'Sem título')}</div>
       <div class="kmeta">${c.data ? `<span class="${atras ? 'late' : ''}">${ic('clock')}</span><span class="${atras ? 'late' : ''}">${fmtCurto(c.data)}${c.hora ? ' · ' + c.hora : ''}</span>` : '<span class="faint">sem data</span>'}
-        <span class="sp"></span>${eng != null ? `<span title="Taxa de engajamento">${pct(eng)}</span>` : ''}${av(c.resp)}</div>
+        <span class="sp"></span>${av(c.resp)}</div>
       ${chk.length && c.status !== 'publicado' ? `<div class="prog" title="${feitos}/${chk.length} etapas"><i style="width:${feitos / chk.length * 100}%"></i></div>` : ''}
     </div></div>`;
 }
@@ -1011,7 +872,7 @@ function pintarDrawer() {
 /* Card de pauta */
 function novoCard(base = {}) {
   const formato = base.formato || 'Reels';
-  D = { tipo: 'card', novo: true, dirty: false, obj: { id: uid(), titulo: '', status: 'ideia', formato, pilar: '', data: '', hora: '', resp: '', legenda: '', notas: '', midias: [], checklist: CHECK_PADRAO[formato].map(t => ({ t, ok: false })), link: '', metricas: {}, criado: Date.now(), ...base } };
+  D = { tipo: 'card', novo: true, dirty: false, obj: { id: uid(), titulo: '', status: 'ideia', formato, pilar: '', data: '', hora: '', resp: '', legenda: '', notas: '', midias: [], checklist: CHECK_PADRAO[formato].map(t => ({ t, ok: false })), link: '', criado: Date.now(), ...base } };
   pintarDrawer(); abrirDrawer(); setTimeout(() => $('#drawer .title-inp')?.focus(), 260);
 }
 function abrirCard(id) {
@@ -1022,7 +883,6 @@ function abrirCard(id) {
 function drawerCard() {
   const c = D.obj, equipe = nomesEquipe();
   const leg = c.legenda || '', hashtags = (leg.match(/#[\p{L}\d_]+/gu) || []).length;
-  const eng = engajamento(c);
   return `
   <div class="dr-h"><span class="pill s-${c.status}">${COL_NOME[c.status]}</span><h3>${D.novo ? 'Nova pauta' : 'Pauta'}</h3><button class="icon-btn" data-act="closeDrawer" aria-label="Fechar">${ic('x')}</button></div>
   <div class="dr-b">
@@ -1056,30 +916,19 @@ function drawerCard() {
     </div>
 
     <div class="fld"><label>Link do post publicado</label><input class="inp" type="url" placeholder="https://www.instagram.com/p/…" value="${esc(c.link)}" data-f="link"></div>
-    ${c.status === 'publicado' || c.link ? `
-    <div class="fld"><label>Métricas do post <span class="faint">(Insights do Instagram)</span></label>
-      <div class="mgrid">${[['alcance', 'Alcance'], ['views', 'Visualizações'], ['curtidas', 'Curtidas'], ['comentarios', 'Comentários'], ['compart', 'Compartilhamentos'], ['salvos', 'Salvamentos']].map(([k, n]) => `<div class="fld"><label class="small">${n}</label><input class="inp" type="number" min="0" inputmode="numeric" value="${c.metricas?.[k] ?? ''}" data-f="metricas.${k}"></div>`).join('')}</div>
-      <div class="eng muted">Taxa de engajamento: <b style="color:var(--text)">${pct(eng)}</b> <span class="faint">· (curtidas + comentários + compart. + salvos) ÷ alcance</span></div>
-    </div>` : ''}
   </div>
   <div class="dr-f">
     ${D.novo ? '' : `<button class="btn danger" data-act="rmCard">${ic('trash')}Excluir</button>`}
     <span class="sp"></span>
-    ${c.data ? `<button class="btn" data-act="gCard">${ic('google')}Agenda</button>` : ''}
     <button class="btn primary" data-act="salvarCard">Salvar</button>
   </div>`;
 }
 
-/* Formulários simples (demanda, métrica, data) */
+/* Formulários simples (demanda, data) */
 const FORMS = {
   demanda: {
     titulo: o => o._novo ? 'Nova demanda' : 'Demanda', col: 'demandas',
     campos: () => [['titulo', 'O que precisa ser feito', 'text'], ['desc', 'Detalhes', 'textarea'], ['secretaria', 'Solicitante / secretaria', 'text'], ['resp', 'Responsável', 'equipe'], ['prazo', 'Prazo', 'date'], ['prioridade', 'Prioridade', 'select', [['alta', 'Alta'], ['media', 'Média'], ['baixa', 'Baixa']]], ['status', 'Status', 'select', DEM_ST]],
-  },
-  metrica: {
-    titulo: () => 'Fechamento de métricas', col: 'metricas',
-    nota: 'Dados do painel profissional do Instagram (Insights). Registre sempre o mesmo período — por exemplo, últimos 30 dias, todo dia 1º.',
-    campos: () => [['data', 'Data do fechamento', 'date'], ['periodo', 'Período', 'select', [['7', 'Últimos 7 dias'], ['30', 'Últimos 30 dias'], ['90', 'Últimos 90 dias']]], ['seguidores', 'Seguidores', 'number'], ['alcance', 'Contas alcançadas', 'number'], ['engajadas', 'Contas com engajamento', 'number'], ['interacoes', 'Interações com o conteúdo', 'number'], ['naoSeg', '% do alcance de não seguidores', 'number'], ['visitas', 'Visitas ao perfil', 'number'], ['cliques', 'Toques no link da bio', 'number'], ['sentimento', 'Clima dos comentários', 'select', [['', '—'], ['positivo', 'Predominantemente positivo'], ['misto', 'Misto'], ['negativo', 'Predominantemente negativo']]], ['obs', 'Observações', 'textarea']],
   },
   data: {
     titulo: o => o._novo ? 'Nova data' : 'Data personalizada', col: 'datas',
@@ -1099,9 +948,7 @@ function drawerForm() {
     return `<div class="fld"><label>${n}</label><input class="inp" type="${t}" ${t === 'number' ? 'min="0" inputmode="decimal"' : ''} value="${esc(v)}" data-f="${k}"></div>`;
   };
   const cs = F.campos();
-  const corpo = D.tipo === 'metrica'
-    ? cs.slice(0, 2).map(campo).join('') + `<div class="f2">${cs.slice(2, 9).map(campo).join('')}</div>` + cs.slice(9).map(campo).join('')
-    : cs.map(campo).join('');
+  const corpo = cs.map(campo).join('');
   return `<div class="dr-h"><h3>${F.titulo(o)}</h3><button class="icon-btn" data-act="closeDrawer" aria-label="Fechar">${ic('x')}</button></div>
   <div class="dr-b">${F.nota ? `<div class="note" style="margin-bottom:16px">${ic('info')}<span>${F.nota}</span></div>` : ''}${corpo}</div>
   <div class="dr-f">${D.novo ? '' : `<button class="btn danger" data-act="rmForm">${ic('trash')}Excluir</button>`}
@@ -1172,115 +1019,6 @@ function vDemandas() {
   </div>`).join('') || `<div class="panel empty">${demTab === 'concluidas' ? 'Nada concluído ainda.' : 'Nenhuma demanda aqui. Use o campo acima para registrar a próxima.'}</div>`}`;
 }
 
-/* ===== MÉTRICAS ===== */
-function vMetricas() {
-  const ms = S.metricas.slice().sort((a, b) => a.data.localeCompare(b.data));
-  const ult = ms[ms.length - 1], pen = ms[ms.length - 2], h = hoje();
-  const pubs = S.cards.filter(c => c.status === 'publicado');
-  const comM = pubs.filter(c => engajamento(c) != null);
-  const ult30 = pubs.filter(c => c.data && diasAte(c.data) >= -30 && c.data <= h);
-  const porFmt = agrupar(comM, 'formato'), porPilar = agrupar(comM, 'pilar');
-  const top = comM.slice().sort((a, b) => engajamento(b) - engajamento(a)).slice(0, 5);
-  const perfil = S.config.perfil;
-
-  const kpi = (l, v, d, i) => `<div class="kpi"><div class="l">${ic(i)}${l}</div><div class="v">${v}</div><div class="d">${d || '&nbsp;'}</div></div>`;
-  const dlt = (k) => ult && pen && ult[k] !== '' && pen[k] !== '' && ult[k] != null && pen[k] != null ? (() => { const n = ult[k] - pen[k]; return `<span class="${n >= 0 ? 'up' : 'down'}">${n >= 0 ? '+' : ''}${num(n)}</span> vs. anterior`; })() : '';
-
-  return `
-  <div class="page-h"><div><p class="eyebrow"><a href="https://www.instagram.com/${esc(perfil)}/" target="_blank" rel="noopener" style="text-transform:none">${ic('insta')} @${esc(perfil)}</a></p><h1>Métricas</h1></div>
-    <div class="h-actions"><button class="btn primary" data-act="novaMetrica">${ic('plus')}Registrar fechamento</button></div></div>
-
-  <div class="kpis">
-    ${kpi('Seguidores', ult ? num(ult.seguidores) : '—', dlt('seguidores'), 'user')}
-    ${kpi('Contas alcançadas', ult ? num(ult.alcance) : '—', dlt('alcance'), 'trend')}
-    ${kpi('Taxa de engajamento', ult ? pct(ult.interacoes / ult.alcance) : '—', 'interações ÷ alcance', 'spark')}
-    ${kpi('Alcance de não seguidores', ult && ult.naoSeg !== '' && ult.naoSeg != null ? ult.naoSeg + '%' : '—', 'potencial de crescimento', 'arrowup')}
-  </div>
-
-  <div class="grid2">
-    <section class="panel"><div class="sec-h"><h2>Seguidores</h2><span class="small muted">${ms.length} fechamentos</span></div>${linha(ms.map(x => ({ l: fmtCurto(x.data), v: +x.seguidores })).filter(x => x.v))}</section>
-    <section class="panel"><div class="sec-h"><h2>Leituras da equipe</h2></div>${leituras(ms, pubs, comM, ult30, porFmt)}</section>
-  </div>
-
-  <div class="grid2">
-    <section class="panel"><div class="sec-h"><h2>Engajamento por formato</h2><span class="small muted">${comM.length} posts com métricas</span></div>${barras(porFmt)}</section>
-    <section class="panel"><div class="sec-h"><h2>Engajamento por pilar</h2></div>${barras(porPilar)}</section>
-  </div>
-
-  <section class="panel" style="margin-bottom:16px"><div class="sec-h"><h2>Posts com melhor desempenho</h2></div>
-    ${top.length ? `<div class="tbwrap"><table class="tb"><thead><tr><th>Post</th><th>Formato</th><th>Data</th><th>Alcance</th><th>Compart.</th><th>Salvos</th><th>Engaj.</th></tr></thead><tbody>
-      ${top.map(c => `<tr data-act="abrirCard" data-id="${c.id}" style="cursor:pointer"><td>${esc(c.titulo)}</td><td>${c.formato || ''}</td><td>${c.data ? fmtCurto(c.data) : ''}</td><td>${num(c.metricas.alcance)}</td><td>${num(c.metricas.compart)}</td><td>${num(c.metricas.salvos)}</td><td><b>${pct(engajamento(c))}</b></td></tr>`).join('')}</tbody></table></div>`
-      : '<div class="empty">Quando uma pauta for para "Publicado", abra o card e preencha alcance, curtidas, compartilhamentos e salvamentos. O ranking aparece aqui.</div>'}
-  </section>
-
-  <section class="panel" style="margin-bottom:16px"><div class="sec-h"><h2>Histórico de fechamentos</h2></div>
-    ${ms.length ? `<div class="tbwrap"><table class="tb"><thead><tr><th>Data</th><th>Período</th><th>Seguidores</th><th>Alcance</th><th>Engajadas</th><th>Interações</th><th>Visitas</th><th>Cliques</th><th>Clima</th></tr></thead><tbody>
-      ${ms.slice().reverse().map(x => `<tr data-act="editarMetrica" data-id="${x.id}" style="cursor:pointer"><td>${fmtCurto(x.data)}</td><td>${x.periodo || '—'} dias</td><td>${num(x.seguidores)}</td><td>${num(x.alcance)}</td><td>${num(x.engajadas)}</td><td>${num(x.interacoes)}</td><td>${num(x.visitas)}</td><td>${num(x.cliques)}</td><td>${x.sentimento || '—'}</td></tr>`).join('')}</tbody></table></div>`
-      : '<div class="empty">Nenhum fechamento registrado.</div>'}
-  </section>
-
-  <section class="panel"><details class="guide"><summary>${ic('info')}Quais métricas importam para o perfil de um prefeito</summary><dl>
-    <dt>Compartilhamentos</dt><dd>O sinal mais forte. Quando o morador manda o post para alguém, o conteúdo virou utilidade ou orgulho. É o que mais faz o Instagram distribuir.</dd>
-    <dt>Salvamentos</dt><dd>Mostra conteúdo útil (serviços, datas, passo a passo). Carrosséis de serviço costumam liderar.</dd>
-    <dt>Alcance de não seguidores</dt><dd>Quanto o perfil fura a bolha. Abaixo de 30% indica que só a base já convencida está vendo.</dd>
-    <dt>Taxa de engajamento</dt><dd>Interações ÷ alcance. Acompanhe a tendência do próprio perfil em vez de comparar com outros.</dd>
-    <dt>Visualizações e retenção de Reels</dt><dd>Se a maioria sai nos 3 primeiros segundos, o problema é a abertura do vídeo, não o assunto.</dd>
-    <dt>Clima dos comentários</dt><dd>Para gestão pública, o tom das conversas importa tanto quanto o volume. Registre no fechamento e anote temas recorrentes de crítica: são pautas.</dd>
-    <dt>Visitas ao perfil e cliques no link</dt><dd>Indicam interesse em saber mais — útil para medir campanhas de serviço (vacinação, IPTU, matrículas).</dd>
-    <dt>Frequência</dt><dd>Constância vence volume: 3 a 5 posts no feed por semana e stories todos os dias mantêm o perfil vivo.</dd>
-  </dl></details></section>`;
-}
-function agrupar(cards, campo) {
-  const g = {};
-  for (const c of cards) { const k = c[campo] || 'Sem ' + (campo === 'pilar' ? 'pilar' : 'formato'); (g[k] = g[k] || []).push(engajamento(c)); }
-  return Object.entries(g).map(([l, a]) => ({ l, v: a.reduce((s, x) => s + x, 0) / a.length, n: a.length })).sort((a, b) => b.v - a.v);
-}
-function barras(it) {
-  if (!it.length) return '<div class="empty">Sem posts com métricas ainda.</div>';
-  const max = Math.max(...it.map(x => x.v)) || 1;
-  return `<div class="bars">${it.map(x => `<div class="b"><span title="${x.n} posts">${esc(x.l)}</span><div class="track"><i style="width:${x.v / max * 100}%"></i></div><span>${pct(x.v)}</span></div>`).join('')}</div>`;
-}
-function linha(pts) {
-  if (pts.length < 2) return `<div class="empty">${pts.length ? 'Registre mais um fechamento para ver a curva.' : 'Nenhum dado ainda.'}</div>`;
-  const W = 600, H = 200, P = { l: 8, r: 8, t: 18, b: 26 };
-  const vs = pts.map(p => p.v), mn = Math.min(...vs), mx = Math.max(...vs), span = (mx - mn) || 1;
-  const x = i => P.l + i * (W - P.l - P.r) / (pts.length - 1), y = v => P.t + (1 - (v - mn) / span) * (H - P.t - P.b);
-  const d = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(' ');
-  const area = `${d} L${x(pts.length - 1)},${H - P.b} L${x(0)},${H - P.b} Z`;
-  const step = Math.ceil(pts.length / 6);
-  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Evolução de seguidores">
-    <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22A699" stop-opacity=".22"/><stop offset="1" stop-color="#22A699" stop-opacity="0"/></linearGradient></defs>
-    <line x1="${P.l}" x2="${W - P.r}" y1="${H - P.b}" y2="${H - P.b}" stroke="#E2EDEA"/>
-    <path d="${area}" fill="url(#ga)"/><path d="${d}" fill="none" stroke="#22A699" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-    ${pts.map((p, i) => `<circle cx="${x(i)}" cy="${y(p.v)}" r="3.5" fill="#fff" stroke="#22A699" stroke-width="2"><title>${p.l}: ${num(p.v)}</title></circle>`).join('')}
-    ${pts.map((p, i) => i % step === 0 || i === pts.length - 1 ? `<text x="${x(i)}" y="${H - 8}" font-size="11" fill="#5F7B76" text-anchor="${i === 0 ? 'start' : i === pts.length - 1 ? 'end' : 'middle'}">${p.l}</text>` : '').join('')}
-    <text x="${x(pts.length - 1)}" y="${y(vs[vs.length - 1]) - 9}" font-size="12" font-weight="600" fill="#11302B" text-anchor="end">${num(vs[vs.length - 1])}</text>
-  </svg>`;
-}
-function leituras(ms, pubs, comM, ult30, porFmt) {
-  const out = [], h = hoje();
-  const feed = ult30.filter(c => c.formato !== 'Stories').length;
-  out.push(['clock', `<b>${feed} posts no feed</b> nos últimos 30 dias. ${feed < 12 ? 'Abaixo do ritmo recomendado (3 por semana) — use a semana modelo em Ideias.' : 'Ritmo bom; mantenha a constância.'}`]);
-  const ultimo = pubs.filter(c => c.data && c.data <= h).sort((a, b) => b.data.localeCompare(a.data))[0];
-  if (ultimo) { const n = -diasAte(ultimo.data); if (n >= 3) out.push(['alert', `<b>${n} dias</b> sem publicação registrada no quadro.`]); }
-  const fmts = porFmt.filter(x => x.n >= 2 && !x.l.startsWith('Sem'));
-  if (fmts.length >= 2) out.push(['trend', `<b>${esc(fmts[0].l)}</b> tem o melhor engajamento médio (${pct(fmts[0].v)}), contra ${pct(fmts[fmts.length - 1].v)} de ${esc(fmts[fmts.length - 1].l)}.`]);
-  if (comM.length >= 3) {
-    const tot = k => comM.reduce((s, c) => s + (+c.metricas[k] || 0), 0);
-    const share = (tot('compart') + tot('salvos')) / Math.max(1, tot('curtidas'));
-    out.push(['spark', `Para cada 100 curtidas, os posts geram <b>${Math.round(share * 100)}</b> compartilhamentos + salvamentos. ${share < .1 ? 'Conteúdo útil (serviço, passo a passo) e de orgulho local ajudam a subir esse número.' : 'Bom sinal de conteúdo que circula.'}`]);
-  }
-  if (ms.length >= 2) {
-    const a = ms[ms.length - 2], b = ms[ms.length - 1];
-    if (+a.seguidores && +b.seguidores) { const g = (b.seguidores - a.seguidores) / a.seguidores; out.push([g >= 0 ? 'arrowup' : 'alert', `Seguidores ${g >= 0 ? 'cresceram' : 'caíram'} <b>${pct(Math.abs(g))}</b> entre os dois últimos fechamentos.`]); }
-    if (b.sentimento === 'negativo') out.push(['alert', 'Clima dos comentários negativo no último fechamento — vale levantar os temas recorrentes e responder com conteúdo.']);
-  }
-  const ult = ms[ms.length - 1];
-  if (ult && ult.naoSeg !== '' && ult.naoSeg != null && +ult.naoSeg < 30) out.push(['info', `Só <b>${ult.naoSeg}%</b> do alcance vem de não seguidores. Reels com trend, collabs e temas de cidade ajudam a furar a bolha.`]);
-  if (!ms.length && !comM.length) out.push(['info', 'Comece registrando um fechamento mensal e as métricas dos posts publicados. As leituras aparecem conforme os dados chegam.']);
-  return out.map(([i, t]) => `<div class="insight">${ic(i)}<div>${t}</div></div>`).join('');
-}
-
 /* ===== IDEIAS ===== */
 let ideiaPilar = '';
 function vIdeias() {
@@ -1316,23 +1054,6 @@ function vConfig() {
       <form data-form="membro" style="display:flex;gap:8px;flex-wrap:wrap"><input class="inp" name="nome" placeholder="Nome" required style="flex:1;min-width:120px"><input class="inp" name="funcao" placeholder="Função (ex.: social media)" style="flex:1;min-width:120px"><button class="btn">${ic('plus')}Adicionar</button></form>
     </section>
 
-    <section class="panel"><h2 style="margin-bottom:8px">Instagram</h2><p>Perfil acompanhado na área de métricas.</p>
-      <div class="fld"><label>Usuário</label><input class="inp" data-cfg="perfil" value="${esc(c.perfil)}" style="width:100%"></div>
-      <div class="note">${ic('info')}<span>O Instagram não libera os números de um perfil por link público. Hoje a equipe registra os fechamentos pelo painel de Insights. Para puxar automático, o perfil precisa ser profissional e ligado a uma página do Facebook, e aí dá para conectar a API da Meta.</span></div>
-    </section>
-
-    <section class="panel"><h2 style="margin-bottom:8px">Google Agenda</h2>
-      <p>Três formas de ligar, da mais simples à mais completa:</p>
-      <ol class="steps">
-        <li><b>Botão "Google Agenda"</b> em cada data e pauta — já funciona, abre o evento preenchido.</li>
-        <li><b>Visualizar a agenda</b> dentro do app: cole o ID abaixo (Google Agenda → Configurações → a agenda → Integrar agenda).</li>
-        <li><b>Sincronizar</b> (ver compromissos no calendário do app e criar eventos direto): precisa de um Client ID do Google Cloud com a origem deste site autorizada.</li>
-      </ol>
-      <div class="fld"><label>ID da agenda</label><input class="inp" data-cfg="gcalId" value="${esc(c.gcalId)}" placeholder="exemplo@group.calendar.google.com" style="width:100%"></div>
-      <div class="fld"><label>Client ID OAuth <span class="faint">(opcional)</span></label><input class="inp" data-cfg="gClientId" value="${esc(c.gClientId)}" placeholder="000000-xxxx.apps.googleusercontent.com" style="width:100%"></div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">${GCal.ok ? `<span class="pill t-comemorativa">${ic('check')}Conectado nesta sessão</span>` : `<button class="btn" data-act="gConnect">${ic('google')}Conectar</button>`}<button class="btn" data-act="exportarICS">${ic('download')}Baixar datas (.ics)</button></div>
-    </section>
-
     <section class="panel"><h2 style="margin-bottom:8px">Datas da cidade</h2><p>Eventos de Poços e datas que a equipe quer acompanhar além da base (${DATAS_FIXAS.length} datas fixas + móveis como Carnaval, Páscoa e Corpus Christi).</p>
       ${datas.map(d => `<div class="row"><div class="datebox ${d.data === h ? 'today' : ''}"><b>${parse(d.data).getDate()}</b><span>${MES_C[parse(d.data).getMonth()]}</span></div><div class="grow"><div class="t">${esc(d.nome)}</div><div class="small muted">${TIPO_NOME[d.tipo] || ''}${d.anual ? ' · todo ano' : ' · ' + parse(d.data).getFullYear()}</div></div><button class="icon-btn sm" data-act="editarData" data-id="${d.id}" aria-label="Editar">${ic('edit')}</button></div>`).join('') || '<div class="small faint" style="margin-bottom:10px">Nenhuma data personalizada.</div>'}
       <button class="btn" data-act="novaData" style="margin-top:10px">${ic('plus')}Adicionar data</button>
@@ -1350,7 +1071,7 @@ function vConfig() {
       <p>${Cloud.on ? 'Fotos e vídeos sobem para o armazenamento da nuvem.' : 'Para a equipe inteira trabalhar no mesmo quadro, o app precisa de um projeto Supabase próprio (gratuito). O arquivo <code>supabase.sql</code> já está pronto.'}</p>
     </section>
 
-    <section class="panel"><h2 style="margin-bottom:8px">Backup</h2><p>Exporte tudo (pautas, demandas, métricas, datas e equipe) em um arquivo. Fotos e vídeos locais não vão no backup.</p>
+    <section class="panel"><h2 style="margin-bottom:8px">Backup</h2><p>Exporte tudo (pautas, demandas, datas e equipe) em um arquivo. Fotos e vídeos locais não vão no backup.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" data-act="exportarJSON">${ic('download')}Exportar</button><button class="btn" data-act="importarJSON">${ic('upload')}Importar</button></div>
     </section>
   </div>`;
@@ -1363,15 +1084,10 @@ const ACT = {
   novoCard: a => novoCard({ ...(a.dataset.d ? { data: a.dataset.d } : {}), ...(a.dataset.s ? { status: a.dataset.s } : {}) }),
   abrirCard: a => abrirCard(a.dataset.id),
   pautarData: a => { const ds = datasDoDia(a.dataset.d, S.datas).find(x => x.nome === a.dataset.n); novoCard({ titulo: a.dataset.n, data: a.dataset.d, pilar: 'Datas comemorativas', notas: ds?.dica || '', dataRef: a.dataset.n }); },
-  gData: a => mandarProGoogle(a.dataset.n, a.dataset.d, '', a.dataset.x),
-  gCard: () => { const c = D.obj; mandarProGoogle(`[${c.formato}] ${c.titulo || 'Pauta'}`, c.data, c.hora, `${COL_NOME[c.status]}${c.resp ? ' · ' + c.resp : ''}\n\n${c.legenda || c.notas || ''}`); },
-  gConnect: () => GCal.connect(),
-  exportarICS: () => exportarICS(),
   selDia: a => { calSel = a.dataset.d; render(); if (innerWidth <= 1100) $('.daypanel')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); },
   calMes: a => { calMes = new Date(calMes.getFullYear(), calMes.getMonth() + +a.dataset.v, 1); render(); },
   calHoje: () => { const d = new Date(); calMes = new Date(d.getFullYear(), d.getMonth(), 1); calSel = hoje(); render(); },
   calFiltro: a => { calF[a.dataset.v] = !calF[a.dataset.v]; render(); },
-  calTab: a => { calTab = a.dataset.v; render(); },
   setFmt: a => {
     const c = D.obj, intacto = c.checklist.every(x => !x.ok) && JSON.stringify(c.checklist.map(x => x.t)) === JSON.stringify(CHECK_PADRAO[c.formato] || []);
     c.formato = a.dataset.v; if (intacto) c.checklist = CHECK_PADRAO[c.formato].map(t => ({ t, ok: false }));
@@ -1399,15 +1115,12 @@ const ACT = {
     if (D) fecharDrawer(true);
     novoCard({ titulo: d.titulo, notas: [d.desc, d.secretaria ? 'Solicitante: ' + d.secretaria : ''].filter(Boolean).join('\n'), resp: d.resp || '', status: 'producao', demandaId: d.id, data: d.prazo || '' });
   },
-  novaMetrica: () => abrirForm('metrica', { id: uid(), data: hoje(), periodo: '30' }, true),
-  editarMetrica: a => { const m = S.metricas.find(x => x.id === a.dataset.id); if (m) abrirForm('metrica', m, false); },
   novaData: a => abrirForm('data', { id: uid(), nome: '', data: a.dataset.d || hoje(), anual: true, tipo: 'local', dica: '' }, true),
   editarData: a => { const d = S.datas.find(x => x.id === a.dataset.id); if (d) abrirForm('data', d, false); },
   salvarForm: () => {
     const F = FORMS[D.tipo], o = { ...D.obj }; delete o._novo;
     if (D.tipo === 'demanda' && !o.titulo?.trim()) return toast('Descreva a demanda');
     if (D.tipo === 'data' && (!o.nome?.trim() || !o.data)) return toast('Preencha nome e data');
-    if (D.tipo === 'metrica') { if (!o.data) return toast('Informe a data'); for (const k of ['seguidores', 'alcance', 'engajadas', 'interacoes', 'naoSeg', 'visitas', 'cliques']) o[k] = o[k] === '' || o[k] == null ? '' : +o[k]; }
     if (D.tipo === 'demanda') o.concluido = o.status === 'concluida' ? (o.concluido || Date.now()) : null;
     upsert(F.col, o); fecharDrawer(true); toast('Salvo');
   },
@@ -1416,7 +1129,7 @@ const ACT = {
   ideiaPilar: a => { ideiaPilar = a.dataset.v; render(); },
   rmMembro: a => { S.config.equipe = S.config.equipe.filter(e => e.id !== a.dataset.id); saveConfig(); render(); },
   atividade: () => abrirAtividade(),
-  abrirAtiv: a => { const col = a.dataset.col, id = a.dataset.id; fecharDrawer(true); if (col === 'cards') abrirCard(id); else if (col === 'demandas') ACT.editarDemanda(a); else if (col === 'datas') ACT.editarData(a); else ACT.editarMetrica(a); },
+  abrirAtiv: a => { const col = a.dataset.col, id = a.dataset.id; fecharDrawer(true); if (col === 'cards') abrirCard(id); else if (col === 'demandas') ACT.editarDemanda(a); else ACT.editarData(a); },
   trocarEu: () => abrirEu(),
   escolherEu: a => definirEu(a.dataset.v),
   ativarPush: () => Push.ativar(false),
@@ -1455,7 +1168,7 @@ document.addEventListener('change', async e => {
   }
   if (t.dataset.q === 'fmt' || t.dataset.q === 'resp') { Q[t.dataset.q] = t.value; render(); }
   if (t.dataset.dst) { const d = S.demandas.find(x => x.id === t.dataset.dst); if (d) upsert('demandas', { ...d, status: t.value, concluido: t.value === 'concluida' ? Date.now() : null }); }
-  if (t.dataset.cfg) { S.config[t.dataset.cfg] = t.value.trim().replace(/^@/, ''); saveConfig(); if (t.dataset.cfg === 'gcalId') { GCal.ev = {}; GCal.seen.clear(); GCal.meses = {}; } toast('Configuração salva'); }
+  if (t.dataset.cfg) { S.config[t.dataset.cfg] = t.value.trim().replace(/^@/, ''); saveConfig(); toast('Configuração salva'); }
   if (t.matches('[data-upload]')) { await anexar([...t.files]); t.value = ''; }
   if (t.id === 'jsonIn' && t.files[0]) {
     try {
@@ -1504,7 +1217,6 @@ document.addEventListener('drop', e => {
 window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (v && v !== view) { view = v; render(); } });
 
 /* ===== Início ===== */
-GCal.restore();
 render();
 setSync();
 Cloud.init().then(() => { lembreteDoDia(); if (!EU && (Cloud.on || S.config.equipe.length)) abrirEu(); });
